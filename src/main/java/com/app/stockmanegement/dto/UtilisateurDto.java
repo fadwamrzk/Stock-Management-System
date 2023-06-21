@@ -1,9 +1,5 @@
 package com.app.stockmanegement.dto;
 
-import com.app.stockmanegement.Model.Address;
-import com.app.stockmanegement.Model.Entreprise;
-import com.app.stockmanegement.Model.Roles;
-import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
 
@@ -12,6 +8,7 @@ import java.util.List;
 @Builder
 public class UtilisateurDto {
     private Integer id;
+
     private String nom;
 
     private String prenom;

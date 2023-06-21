@@ -1,10 +1,5 @@
 package com.app.stockmanegement.dto;
 
-import com.app.stockmanegement.Model.Address;
-import com.app.stockmanegement.Model.CommandeFournisseur;
-import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
-import jakarta.persistence.OneToMany;
 import lombok.Builder;
 import lombok.Data;
 
@@ -13,6 +8,7 @@ import java.util.List;
 @Builder
 public class FournisseurDto {
     private Integer id;
+
     private String nom;
 
     private String prenom;

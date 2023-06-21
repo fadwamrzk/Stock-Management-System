@@ -1,19 +1,18 @@
 package com.app.stockmanegement.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.DatabindException;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Generated;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.Date;
 
 @Data
 @MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
 public class AbstractEntity implements Serializable {
 
     @Id

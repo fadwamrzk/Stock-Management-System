@@ -1,10 +1,6 @@
 package com.app.stockmanegement.dto;
 
-import com.app.stockmanegement.Model.Address;
-import com.app.stockmanegement.Model.CommandeClient;
-import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
-import jakarta.persistence.OneToMany;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
@@ -19,6 +15,8 @@ public class ClientDto {
     private String photo;
     private String mail;
     private String numTel;
+
+    @JsonIgnore
     private List<CommandeClientDto> commandeClients;
 
 }

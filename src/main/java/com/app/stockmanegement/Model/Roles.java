@@ -1,11 +1,9 @@
 package com.app.stockmanegement.Model;
 
-import com.app.stockmanegement.dto.UtilisateurDto;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)

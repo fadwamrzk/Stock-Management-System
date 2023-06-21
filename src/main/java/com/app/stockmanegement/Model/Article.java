@@ -33,6 +33,5 @@ public class Article extends AbstractEntity{
     @ManyToOne
     @JoinColumn(name="idcategory")
     private Category category;
-
 }
 
