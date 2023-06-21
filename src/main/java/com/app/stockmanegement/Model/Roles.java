@@ -1,7 +1,7 @@
 package com.app.stockmanegement.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.app.stockmanegement.dto.UtilisateurDto;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Data
@@ -12,5 +12,10 @@ import lombok.*;
 @Entity
 @Table(name="roles")
 public class Roles extends AbstractEntity {
-    private String nom;
+    @Column(name = "roles")
+    private String roleName;
+
+    @ManyToOne
+    @JoinColumn (name = "idutilisateur")
+    private User utilisateur;
 }
